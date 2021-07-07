@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Cursos</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <h1 class="text-center">Aprobar alumno</h1>
+          <hr/>
+          <br/>
+        </div>
+      </div>
+
+      <div class="form-curso">
+        <form>
+          <label class="address">Direccion</label>
+          <input id="input-address" type="text" name="name">
+          <hr/>
+          <label class="curso">Curso</label>
+          <input id="input-curso" type="nota" name="curso">
+          <hr/>
+          <label class="nota">Nota</label>
+          <input id="input-nota" type="number" name="nota">
+          <hr/>
+          <label class="solo-cursada">Solo cursada</label>
+          <input id="input-solo-cursada" type="checkbox" name="solo-cursada">
+          <hr/>
+          <br/>
+          <button class="btn btn-default btn-submit-approval" type="button" data-id="0">Apply</button>
+          <button class="btn btn-default btn-back" type="button" data-id="0">Cancelar</button>
+        </form>
+      </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.4.0/dist/web3.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

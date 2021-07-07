@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Cursos</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <h1 class="text-center">Cursos</h1>
+          <hr/>
+          <br/>
+        </div>
+      </div>
+      <div class="row-buttons">
+          <button class="btn btn-default btn-create-course" type="button" data-id="0">Crear curso</button>
+          <button class="btn btn-default btn-students" type="button" data-id="0">Verificar alumno</button>
+          <button class="btn btn-default btn-aprove" type="button" data-id="0">Aprobar alumno</button>
+          <hr/>
+          <br/>
+        </div>
+      </div>
+    </div>
+
+    <table id="cursos-table" style="width:100%">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Creditos</th>
+        <th>Profesor</th>
+        <th>Activo</th>
+        <th>Correlatvas</th>
+        <th>Accion</th>
+      </tr>
+    </table>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.4.0/dist/web3.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

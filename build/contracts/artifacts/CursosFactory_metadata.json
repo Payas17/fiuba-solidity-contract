@@ -1,0 +1,631 @@
+{
+	"compiler": {
+		"version": "0.8.4+commit.c7e474f2"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "alumno",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "cursoId",
+						"type": "uint256"
+					}
+				],
+				"name": "AproboMateria",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "aprobados",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "soloCursada",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint8",
+						"name": "nota",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fechaDeAprobacion",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_alumno",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_cursoId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "_soloCursada",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_nota",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_fechaDeAprobacion",
+						"type": "uint256"
+					}
+				],
+				"name": "aprobarAlumno",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_balance",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "cantidadCursos",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "correlativasCurso",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_nombre",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_creditos",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8[]",
+						"name": "_correlativas",
+						"type": "uint8[]"
+					},
+					{
+						"internalType": "bool",
+						"name": "_activo",
+						"type": "bool"
+					},
+					{
+						"internalType": "address",
+						"name": "_profesor",
+						"type": "address"
+					}
+				],
+				"name": "crearCurso",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "creditos",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "cursos",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "nombre",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "creditos",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bool",
+						"name": "activo",
+						"type": "bool"
+					},
+					{
+						"internalType": "address",
+						"name": "profesor",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "decimals",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_alumno",
+						"type": "address"
+					}
+				],
+				"name": "getAlumno",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "bool[]",
+						"name": "",
+						"type": "bool[]"
+					},
+					{
+						"internalType": "uint8[]",
+						"name": "",
+						"type": "uint8[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_alumno",
+						"type": "address"
+					}
+				],
+				"name": "getAlumno2",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"components": [
+							{
+								"internalType": "bool",
+								"name": "soloCursada",
+								"type": "bool"
+							},
+							{
+								"internalType": "uint8",
+								"name": "nota",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint256",
+								"name": "fechaDeAprobacion",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct CursosFactory.Aprobacion[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_cursoId",
+						"type": "uint256"
+					}
+				],
+				"name": "getCurso",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8[]",
+						"name": "",
+						"type": "uint8[]"
+					},
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_cursoId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_nombre",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_creditos",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8[]",
+						"name": "_correlativas",
+						"type": "uint8[]"
+					},
+					{
+						"internalType": "bool",
+						"name": "_activo",
+						"type": "bool"
+					},
+					{
+						"internalType": "address",
+						"name": "_profesor",
+						"type": "address"
+					}
+				],
+				"name": "modificarCurso",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_alumno",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_cursoId",
+						"type": "uint256"
+					}
+				],
+				"name": "removerAlumnoDelCurso",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_alumno",
+						"type": "address"
+					}
+				],
+				"name": "removerCursadasVencidas",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "_notaMaxima",
+						"type": "uint8"
+					}
+				],
+				"name": "setearNotaMaxima",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "_notaMinima",
+						"type": "uint8"
+					}
+				],
+				"name": "setearNotaMinima",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/CursosFactory.sol": "CursosFactory"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/access/Ownable.sol": {
+			"keccak256": "0x1cae4f85f114ff17b90414f5da67365b1d00337abb5bce9bf944eb78a2c0673c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d5ff16b336ce8f906478d5f2eecc6435e00833bdc0b92f6b209cf9e92cb5b2b7",
+				"dweb:/ipfs/QmRD1rAZEqQ73C33cdA3QoUyBDMEWnNKNMc6PNkAZWHeQQ"
+			]
+		},
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0xf930d2df426bfcfc1f7415be724f04081c96f4fb9ec8d0e3a521c07692dface0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fc2bfdea0d2562c76fb3c4cf70a86c6ba25c5a30e8f8515c95aafdf8383f8395",
+				"dweb:/ipfs/QmTbFya18786ckJfLYUoWau9jBTKfmWnWm5XSViWvB7PXN"
+			]
+		},
+		"contracts/CreditoToken.sol": {
+			"keccak256": "0x3a5ec6452322cd1ae5622e734e3076eb28d17e3db3ff15952979409d62f60f2b",
+			"urls": [
+				"bzz-raw://284464b49e61ec2f02cbca023e3564f40dfd2c526db621e46fef9a7346bff7b7",
+				"dweb:/ipfs/QmRfKh7pmt8ZbzadqFqWRwM5SwkN6qpg4MvwHFKmBfw7KM"
+			]
+		},
+		"contracts/CursosFactory.sol": {
+			"keccak256": "0x578364a6e9fe14b25efa9468a790943fe09f8a3159d0ae6dbd6f0369b51e7bb0",
+			"urls": [
+				"bzz-raw://77d776ae6211021e76fe8e37131b47e4f0243dd5b2d331ebac3b8f4988351ca7",
+				"dweb:/ipfs/QmVB9yqH7yCmQgu44Q75hrbUAyCD7TVbEuMRygh6tY3aYF"
+			]
+		}
+	},
+	"version": 1
+}
